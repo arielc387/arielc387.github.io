@@ -7,10 +7,13 @@ branch.init('key_live_cc349jpeatIavheur8XNAbgiwAa6vIY9',function(err, data) {
     branch.addListener('willShowJourney', ()=>{
 
      setTimeout(() => {
+
+     document.write(JSON.stringify(data))
+
      if (!err && !data["+clicked_branch_link"]) {
         branch.closeJourney();
      }
-     }, 100);
+     }, 1000);
 
     });
 
