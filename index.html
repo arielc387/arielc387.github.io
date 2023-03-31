@@ -1,5 +1,81 @@
-<script>         
-(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking qrCode".split(" "), 0);
+<script>      
+
+
+function getAllUrlParams(url) {
+
+// get query string from url (optional) or window
+var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+// we'll store the parameters here
+var obj = {};
+
+// if query string exists
+if (queryString) {
+
+  // stuff after # is not part of query string, so get rid of it
+  queryString = queryString.split('#')[0];
+
+  // split our query string into its component parts
+  var arr = queryString.split('&');
+
+  for (var i = 0; i < arr.length; i++) {
+    // separate the keys and the values
+    var a = arr[i].split('=');
+
+    // set parameter name and value (use 'true' if empty)
+    var paramName = a[0];
+    var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+    // (optional) keep case consistent
+    paramName = paramName.toLowerCase();
+    if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+    // if the paramName ends with square brackets, e.g. colors[] or colors[2]
+    if (paramName.match(/\[(\d+)?\]$/)) {
+
+      // create key if it doesn't exist
+      var key = paramName.replace(/\[(\d+)?\]/, '');
+      if (!obj[key]) obj[key] = [];
+
+      // if it's an indexed array e.g. colors[2]
+      if (paramName.match(/\[\d+\]$/)) {
+        // get the index value and add the entry at the appropriate position
+        var index = /\[(\d+)\]/.exec(paramName)[1];
+        obj[key][index] = paramValue;
+      } else {
+        // otherwise add the value to the end of the array
+        obj[key].push(paramValue);
+      }
+    } else {
+      // we're dealing with a string
+      if (!obj[paramName]) {
+        // if it doesn't exist, create property
+        obj[paramName] = paramValue;
+      } else if (obj[paramName] && typeof obj[paramName] === 'string'){
+        // if property does exist and it's a string, convert it to an array
+        obj[paramName] = [obj[paramName]];
+        obj[paramName].push(paramValue);
+      } else {
+        // otherwise add the property
+        obj[paramName].push(paramValue);
+      }
+    }
+  }
+}
+
+return obj;
+}
+
+if (getAllUrlParams()._branch_match_id){
+  (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking qrCode".split(" "), 0);
+// init Branch
+branch.init('key_live_cc349jpeatIavheur8XNAbgiwAa6vIY9');
+
+}
+
+
+
+/*(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking qrCode".split(" "), 0);
 // init Branch
 branch.init('key_live_cc349jpeatIavheur8XNAbgiwAa6vIY9',function(err, data) {
 
@@ -15,9 +91,13 @@ branch.init('key_live_cc349jpeatIavheur8XNAbgiwAa6vIY9',function(err, data) {
 
     });
 
+   
 
    
 
-});
+});*/
 
 </script>
+
+
+<h2>Demo Page</h2>
