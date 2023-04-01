@@ -8,7 +8,7 @@ const queryParams = new URLSearchParams(window.location.search);
 // Access individual parameter values
 const deeplink = queryParams.get('deeplink');
 
-if (deeplink && deeplink.indexOf(window.location.origin) === 0){
+if (deeplink /*&& deeplink.indexOf(window.location.origin) === 0*/){
   window.location.href = deeplink
 }
 
