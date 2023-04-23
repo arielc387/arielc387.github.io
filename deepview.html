@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Responsive View</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+        html {
+            margin: 0;
+            padding: 0;
+            background: url("https://arielc387.github.io/images/bg-image.svg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .page-title {
+            width: 312px;
+            height: 60px;
+
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 30px;
+            /* or 125% */
+
+            text-align: center;
+
+            /* Grey Scale/Gray 1 */
+
+            color: #333333;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .page-description {
+            width: 312px;
+            height: 92px;
+
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            /* or 144% */
+
+            text-align: center;
+
+            /* Grey Scale/Gray 2 */
+
+            color: #4F4F4F;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            flex-grow: 0;
+
+            margin-top: 0;
+            margin-bottom: 55px;
+        }
+
+        .primary-cta {
+            /* button-cta */
+            box-sizing: border-box;
+
+            /* Auto layout */
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 13px 41px;
+            gap: 10px;
+
+            width: 335px;
+            height: 46px;
+            max-width: 90%;
+
+            /* Base / Tertiary */
+
+            background: #5577F1;
+            /* Base / Tertiary */
+
+            border: 1px solid #5577F1;
+            border-radius: 12px;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin-top: 10px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 14px;
+            text-decoration: none;
+
+            /* Base / Pure White */
+
+            color: #FFFFFF;
+        }
+
+        .primary-cta .title {
+            margin-top: 0px;
+        }
+
+        .primary-cta .store-logo {
+            /* iconography */
+
+
+            width: 20px;
+            height: 20px;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+        .secondary-cta {
+            /* button-cta */
+            box-sizing: border-box;
+
+            /* Auto layout */
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 53px;
+            gap: 10px;
+
+            width: 335px;
+            height: 46px;
+            max-width: 90%;
+
+            /* Base / Tertiary */
+
+            background: #E0E6FC;
+            /* Base / Tertiary */
+            border-radius: 12px;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin-top: 10px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 14px;
+            text-decoration: none;
+            /* Base / Pure White */
+
+            color: #5577F1;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://arielc387.github.io/images/logo-paven.svg" alt="Logo" class="logo">
+        <h1 class="page-title">You are being redirected to another page.</h1>
+        <p class="page-description">Installing our app will enhance your experience by providing faster access, more
+            features, and a seamless user interface.</p>
+        <a href="#" class="primary-cta"><img class="store-logo"
+                src="https://arielc387.github.io/images/logo-apple.svg" class="store-logo" /><span
+                class="title">Get the
+                App</span></a>
+        <a href="#" class="secondary-cta"><span class="title">Continue in website</span></a>
+    </div>
+</body>
+
+</html>
